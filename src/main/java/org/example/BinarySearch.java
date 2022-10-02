@@ -12,11 +12,11 @@ public class BinarySearch {
      * @param key int - the value of the key to be found.
      * @return int - index of the key in arr.
      */
-    public static int binarySearch(int arr[], int key){
+    public static int binarySearch(int[] arr, int key){
         int first = 0;
         int last=arr.length-1;
 
-        int mid = (first  + last)/2;
+        int mid = (first + last)/2;
 
         while( first <= last ){
             if ( arr[mid] < key ){
