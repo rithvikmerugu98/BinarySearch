@@ -19,6 +19,7 @@ public class BinarySearch {
         while( first <= last ){
 
             Integer mid = (first + last)/2;
+            boolean found = true;
             if( arr[mid] < key ){
                 first = mid + 1;
             } else if ( arr[mid] == key ){
@@ -26,8 +27,6 @@ public class BinarySearch {
             } else {
                 last = mid - 1;
             }
-            mid = null;
-            System.gc();
         }
 
         return -1;
