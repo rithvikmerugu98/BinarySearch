@@ -15,7 +15,6 @@ public class BinarySearch {
         int first = 0;
         int last=arr.length-1;
         String defect = "This variable is for dataflow anomaly.";
-        //int mid = (first + last)/2;
 
         while( first <= last ){
 
@@ -24,7 +23,7 @@ public class BinarySearch {
                 first = mid + 1;
             }else if ( arr[mid] == key ){
                 return mid;
-            }else if (arr[mid] < key){
+            }else if (arr[mid] > key){
                 last = mid - 1;
             } else {
                 //do nothing.
