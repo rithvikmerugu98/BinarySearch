@@ -11,19 +11,23 @@ public class BinarySearch {
      * @param key int - the value of the key to be found.
      * @return int - index of the key in arr.
      */
-    public static int binarySearch(int arr[], int key){
+    public static int binarySearch(int[] arr, int key){
         int first = 0;
         int last=arr.length-1;
-
-        int mid = (first + last)/2;
+        String defect = "This variable is for dataflow anomaly.";
+        //int mid = (first + last)/2;
 
         while( first <= last ){
+
+            int mid = (first + last)/2;
             if ( arr[mid] < key ){
                 first = mid + 1;
             }else if ( arr[mid] == key ){
                 return mid;
-            }else{
+            }else if (arr[mid] < key){
                 last = mid - 1;
+            } else {
+                //do nothing.
             }
             mid = (first + last)/2;
         }
