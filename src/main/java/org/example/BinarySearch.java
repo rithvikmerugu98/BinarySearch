@@ -18,18 +18,18 @@ public class BinarySearch {
 
         while( first <= last ){
 
-            int mid = (first + last)/2;
-            if ( arr[mid] < key ){
+            Integer mid = (first + last)/2;
+            if( arr[mid] < key ){
                 first = mid + 1;
-            }else if ( arr[mid] == key ){
+            } else if ( arr[mid] == key ){
                 return mid;
-            }else if (arr[mid] > key){
-                last = mid - 1;
             } else {
-                //do nothing.
+                last = mid - 1;
             }
-            mid = (first + last)/2;
+            mid = null;
+            System.gc();
         }
+
         return -1;
     }
 }
